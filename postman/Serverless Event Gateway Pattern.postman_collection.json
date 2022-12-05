@@ -1,0 +1,59 @@
+{
+  "info": {
+    "_postman_id": "0b03341a-7b28-4787-847b-67310f9785e6",
+    "name": "Serverless Event Gateway Pattern",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "Internal - Create Order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": \"lee\",\n    \"productId\": \"22222\",\n    \"quantity\": 11\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-rest-id.execute-api.your-region.amazonaws.com/prod/orders/",
+          "protocol": "https",
+          "host": [
+            "your-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "orders", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "External - Cancel Order",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://your-rest-id.execute-api.your-region.amazonaws.com/prod/orders/lee",
+          "protocol": "https",
+          "host": [
+            "your-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "orders", "lee"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

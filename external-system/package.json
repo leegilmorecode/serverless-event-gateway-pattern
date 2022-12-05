@@ -1,0 +1,37 @@
+{
+  "name": "external-system",
+  "version": "0.1.0",
+  "bin": {
+    "external-system": "bin/external-system.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "deploy": "cdk deploy --outputs-file ./cdk-outputs.json --all",
+    "deploy:hot": "cdk deploy --outputs-file ./cdk-outputs.json --all --hotswap",
+    "remove": "cdk destroy --all"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.109",
+    "@types/jest": "^27.5.2",
+    "@types/node": "10.17.27",
+    "@types/prettier": "2.6.0",
+    "@types/uuid": "^9.0.0",
+    "aws-cdk": "2.49.0",
+    "esbuild": "^0.16.2",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.9.1",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.49.0",
+    "aws-sdk": "^2.1270.0",
+    "axios": "^1.2.1",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21",
+    "uuid": "^9.0.0"
+  }
+}

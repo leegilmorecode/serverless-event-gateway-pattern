@@ -1,0 +1,4 @@
+.DS_Store
+external-system/cdk-outputs.json
+shared-resources/cdk-outputs.json
+internal-system/cdk-outputs.json
